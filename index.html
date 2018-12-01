@@ -2,91 +2,93 @@
 <html lang="en">
 
 <head>
+  <title>ICBC MC Insurance Estimater</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ICBC MC Insurance Estimater</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <a href="https://www.icbc.com/about-icbc/company-info/Documents/bcuc/basic-tariff.pdf">Basic Insurance Tariff</a>
-  <a href="https://www.icbc.com/autoplan/Documents/autoplan-insurance-brochure.pdf">Autoplan Brochure</a>
+  <estimator>
+    <h1>ICBC Motorcycle Insurance Estimator</h1>
 
-  <div>
-    <label for="rate-class-select">Choose a Rate Class:</label>
-    <select id="rate-class-select">
-      <option value="rate-class">-- Please choose an option --</option>
-      <option value="310">Up to 100 cc</option>
-      <option value="311">111 - 400 cc</option>
-      <option value="312">401 - 750 cc</option>
-      <option value="313">751 - 1150 cc</option>
-      <option value="314">Over 1150 cc</option>
-    </select>
-  </div>
+    <div>
+      <label for="rate-class-select">Choose a Rate Class:</label>
+      <select id="rate-class-select">
+        <option value="rate-class"></option>
+        <option value="310">Up to 100 cc</option>
+        <option value="311">111 - 400 cc</option>
+        <option value="312">401 - 750 cc</option>
+        <option value="313">751 - 1150 cc</option>
+        <option value="314">Over 1150 cc</option>
+      </select>
+    </div>
 
-  <div>
-    <input type="checkbox" id="sixty-five" name="sixty-five">
-    <label for="sixty-five">65 years or older</label>
-    <br />
-    <input type="checkbox" id="collector" name="collector">
-    <label for="collector">Collector Plate</label>
-  </div>
+    <div>
+      <input type="checkbox" id="sixty-five" name="sixty-five">
+      <label for="sixty-five">65 years or older</label>
+      <br />
+      <input type="checkbox" id="collector" name="collector">
+      <label for="collector">Collector Plate</label>
+    </div>
 
-  <div>
-    <label for="territory-select">Choose a territory:</label>
-    <select id="territory-select">
-      <option value="territory">-- Please choose an option --</option>
-      <option value="D">D: Lower Mainland</option>
-      <option value="E">E: Maple Ridge / Pitt Meadows</option>
-      <option value="F">F: Squamish / Whistler area</option>
-      <option value="G">G: Pemberton area / Hope area</option>
-      <option value="H">H: Fraser Valley</option>
-      <option value="L">L: Thompson / Okanagan area</option>
-      <option value="N">N: Kootenays</option>
-      <option value="P">P: Cariboo area</option>
-      <option value="R">R: Prince George area</option>
-      <option value="S">S: Northern coast</option>
-      <option value="V">V: Peace River area</option>
-      <option value="W">W: Southern Vancouver Island / other islands</option>
-      <option value="X">X: Middle Vancouver Island / Sunshine Coast areas</option>
-      <option value="Y">Y: Northern Vancouver Island</option>
-      <option value="Z">Z: Other provinces / 'Murrica</option>
-    </select>
-  </div>
+    <div>
+      <label for="territory-select">Choose a territory:</label>
+      <select id="territory-select">
+        <option value="territory"></option>
+        <option value="D">D: Lower Mainland</option>
+        <option value="E">E: Maple Ridge / Pitt Meadows</option>
+        <option value="F">F: Squamish / Whistler area</option>
+        <option value="G">G: Pemberton area / Hope area</option>
+        <option value="H">H: Fraser Valley</option>
+        <option value="L">L: Thompson / Okanagan area</option>
+        <option value="N">N: Kootenays</option>
+        <option value="P">P: Cariboo area</option>
+        <option value="R">R: Prince George area</option>
+        <option value="S">S: Northern coast</option>
+        <option value="V">V: Peace River area</option>
+        <option value="W">W: Southern Vancouver Island / other islands</option>
+        <option value="X">X: Middle Vancouver Island / Sunshine Coast areas</option>
+        <option value="Y">Y: Northern Vancouver Island</option>
+        <option value="Z">Z: Other provinces / 'Murrica</option>
+      </select>
+    </div>
 
-  <div>
-    <label for="discount-select">Choose a discount:</label>
-    <select id="discount-select">
-      <option value="discount">-- Please choose an option --</option>
-      <option value="3.05">205% surcharge</option>
-      <option value="2.65">165% surcharge</option>
-      <option value="2.3">130% surcharge</option>
-      <option value="2">100% surcharge</option>
-      <option value="1.75">75% surcharge</option>
-      <option value="1.55">55% surcharge</option>
-      <option value="1.4">40% surcharge</option>
-      <option value="1.3">30% surcharge</option>
-      <option value="1.2">20% surcharge</option>
-      <option value="1.1">10% surcharge</option>
-      <option value="1">Base Rate</option>
-      <option value=".95">5% discount</option>
-      <option value=".9">10% discount</option>
-      <option value=".85">15% discount</option>
-      <option value=".8">20% discount</option>
-      <option value=".75">25% discount</option>
-      <option value=".7">30% discount</option>
-      <option value=".65">35% discount</option>
-      <option value=".6">40% discount</option>
-      <option value=".57">43% discount</option>
-    </select>
-  </div>
+    <div>
+      <label for="discount-select">Choose a discount:</label>
+      <select id="discount-select">
+        <option value="discount"></option>
+        <option value="3.05">205% surcharge</option>
+        <option value="2.65">165% surcharge</option>
+        <option value="2.3">130% surcharge</option>
+        <option value="2">100% surcharge</option>
+        <option value="1.75">75% surcharge</option>
+        <option value="1.55">55% surcharge</option>
+        <option value="1.4">40% surcharge</option>
+        <option value="1.3">30% surcharge</option>
+        <option value="1.2">20% surcharge</option>
+        <option value="1.1">10% surcharge</option>
+        <option value="1">Base Rate</option>
+        <option value=".95">5% discount</option>
+        <option value=".9">10% discount</option>
+        <option value=".85">15% discount</option>
+        <option value=".8">20% discount</option>
+        <option value=".75">25% discount</option>
+        <option value=".7">30% discount</option>
+        <option value=".65">35% discount</option>
+        <option value=".6">40% discount</option>
+        <option value=".57">43% discount</option>
+      </select>
+    </div>
 
-  <h1 id="premium-display"></h1>
-  <ul>
-    <li id="rate-class-display"></li>
-    <li id="territory-display"></li>
-    <li id="discount-display"></li>
-  </ul>
+    <h2 id="premium-display"></h1>
+    <ul>
+      <li id="rate-class-display"></li>
+      <li id="territory-display"></li>
+      <li id="discount-display"></li>
+    </ul>
+  </estimator>
 </body>
 
 <script src="estimate.js"></script>

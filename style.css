@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(237, 237, 237);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+}
+
+ul {
+  list-style-type: none;
+}
