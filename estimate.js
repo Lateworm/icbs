@@ -23,11 +23,11 @@ const premiums = {
 }
 
 
+let displacement = null;
 let rateClass = null;
-let adjustedRateClass = null;
-const rateSelect = document.getElementById('rate-class-select');
-rateSelect.addEventListener('change', e => {
-  rateClass = rateSelect.options[rateSelect.selectedIndex].value;
+const displacementSelect = document.getElementById('displacement-select');
+displacementSelect.addEventListener('change', e => {
+  displacement = displacementSelect.options[displacementSelect.selectedIndex].value;
   displayPremium();
 }, false);
 
@@ -35,7 +35,6 @@ let sixtyFive = false;
 const sixtyFiveCheckbox = document.getElementById('sixty-five');
 sixtyFiveCheckbox.addEventListener('change', e => {
   sixtyFive = sixtyFiveCheckbox.checked;
-  console.log(`sixtyFive == ${sixtyFive}`)
   displayPremium();
 }, false);
 
@@ -43,7 +42,6 @@ let collector = false;
 const collectorCheckbox = document.getElementById('collector');
 collectorCheckbox.addEventListener('change', e => {
   collector = collectorCheckbox.checked;
-  console.log(`collector == ${collector}`)
   displayPremium();
 }, false);
 
@@ -62,24 +60,28 @@ discountSelect.addEventListener('change', e => {
 }, false);
 
 const displayPremium = () => {
-  if (rateClass && territory && discount) {
+  if (displacement && territory && discount) {
 
-    adjustedRateClass = rateClass
-    if (sixtyFive) { adjustedRateClass = parseInt(adjustedRateClass, 10) + 10; }
-    if (collector) { adjustedRateClass = parseInt(adjustedRateClass, 10) + 400; }
+    rateClass = displacement
+    if (sixtyFive) { rateClass = parseInt(rateClass, 10) + 10; }
+    if (collector) { rateClass = parseInt(rateClass, 10) + 400; }
 
-    baseRatePremium = premiums[adjustedRateClass][territory]
+    baseRatePremium = premiums[rateClass][territory]
     claimRatedPremium = baseRatePremium * discount
     roundedPremium = Math.round(claimRatedPremium)
 
-    const premiumDisplayElement = document.getElementById('premium-display');
     const rateClassDisplayElement = document.getElementById('rate-class-display');
     const territoryDisplayElement = document.getElementById('territory-display');
     const discountDisplayElement = document.getElementById('discount-display');
+    const premiumDisplayElement = document.getElementById('premium-display');
+    const feeDisplayElement = document.getElementById('fee-display');
+    const totalDisplayElement = document.getElementById('total-display');
 
-    premiumDisplayElement.innerHTML = `~$${roundedPremium}`;
-    rateClassDisplayElement.innerHTML = `Rate Class: ${adjustedRateClass}`;
-    territoryDisplayElement.innerHTML = `Territory: ${territory}`;
-    discountDisplayElement.innerHTML = `Claim Rate: ${Math.round((discount - 1) * 100)}%`;
+    rateClassDisplayElement.innerHTML = rateClass;
+    territoryDisplayElement.innerHTML = territory;
+    discountDisplayElement.innerHTML = Math.round((discount - 1) * 100);
+    premiumDisplayElement.innerHTML = `$${roundedPremium}`;
+    feeDisplayElement.innerHTML = '$33'
+    totalDisplayElement.innerHTML = `$${roundedPremium + 33}`
   }
 }

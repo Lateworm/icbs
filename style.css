@@ -1,11 +1,73 @@
 body {
   background-color: rgb(237, 237, 237);
   font-family: sans-serif;
-  display: flex;
-  justify-content: center;
+  font-weight: 300;
+  margin: 1rem;
+}
+
+.disclaimer {
+  font-size: .75rem;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+.form-row {
+  height: 1.5rem;
+}
+.form-row label,
+.label {
+  padding-right: .5rem;
+}
+.form-row select,
+.form-row input {
+  width: 10rem;
+  border: none;
   font-weight: 300;
 }
 
 ul {
   list-style-type: none;
+  padding-left: 0px; /* removing default left padding */
+}
+
+#total-display {
+  font-weight: 400;
+}
+
+
+@media screen and (min-width: 411px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .form-row label,
+  .label {
+    text-align: right;
+  }
+  .form-row select,
+  .form-row input,
+  #rate-class-display,
+  #territory-display,
+  #discount-display,
+  #premium-display,
+  #fee-display,
+  #total-display {
+    width: 15rem;
+    height: 1.25rem;
+    font-size: 1rem;
+  }
 }

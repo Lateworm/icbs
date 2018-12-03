@@ -6,17 +6,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="normy.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <estimator>
-    <h1>ICBC Motorcycle Insurance Estimator</h1>
+  <h1>ICBC Motorcycle Insurance Estimator</h1>
 
-    <div>
-      <label for="rate-class-select">Choose a Rate Class:</label>
-      <select id="rate-class-select">
-        <option value="rate-class"></option>
+  <div>
+    <div class="form-row">
+      <label for="rate-class-select">Displacement</label>
+      <select id="displacement-select">
+        <option value="displacement"></option>
         <option value="310">Up to 100 cc</option>
         <option value="311">111 - 400 cc</option>
         <option value="312">401 - 750 cc</option>
@@ -25,16 +26,18 @@
       </select>
     </div>
 
-    <div>
-      <input type="checkbox" id="sixty-five" name="sixty-five">
+    <div class="form-row">
       <label for="sixty-five">65 years or older</label>
-      <br />
-      <input type="checkbox" id="collector" name="collector">
-      <label for="collector">Collector Plate</label>
+      <input type="checkbox" id="sixty-five" name="sixty-five">
     </div>
 
-    <div>
-      <label for="territory-select">Choose a territory:</label>
+    <div class="form-row">
+      <label for="collector">Collector Plate</label>
+      <input type="checkbox" id="collector" name="collector">
+    </div>
+
+    <div class="form-row">
+      <label for="territory-select">Territory</label>
       <select id="territory-select">
         <option value="territory"></option>
         <option value="D">D: Lower Mainland</option>
@@ -55,8 +58,8 @@
       </select>
     </div>
 
-    <div>
-      <label for="discount-select">Choose a discount:</label>
+    <div class="form-row">
+      <label for="discount-select">Discount</label>
       <select id="discount-select">
         <option value="discount"></option>
         <option value="3.05">205% surcharge</option>
@@ -82,13 +85,21 @@
       </select>
     </div>
 
-    <h2 id="premium-display"></h1>
+    <h2>Summary</h2>
     <ul>
-      <li id="rate-class-display"></li>
-      <li id="territory-display"></li>
-      <li id="discount-display"></li>
+      <li class="form-row"><span class="label">Rate Class:</span><span id="rate-class-display">--</span></li>
+      <li class="form-row"><span class="label">Territory:</span><span id="territory-display">--</span></li>
+      <li class="form-row"><span class="label">Claim Rate:</span><span id="discount-display">--</span></li>
+      <li class="form-row"><span class="label">Your Cost:</span><span id="premium-display">--</span></li>
+      <li class="form-row"><span class="label">Annual Licence Fee:</span><span id="fee-display">--</span></li>
+      <li class="form-row"><span class="label">Total Payable:</span><span id="total-display">--</span></li>
     </ul>
-  </estimator>
+
+    <p class="disclaimer">
+      This site is not associated with ICBC. It is an open-source community project.
+      You may <a href="https://github.com/Lateworm/icbcmc/issues">report inaccuracies</a>.
+    </p>
+  </div>
 </body>
 
 <script src="estimate.js"></script>
