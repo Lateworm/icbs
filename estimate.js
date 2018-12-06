@@ -72,6 +72,7 @@ const displayPremium = () => {
 
     const rateClassDisplayElement = document.getElementById('rate-class-display');
     const territoryDisplayElement = document.getElementById('territory-display');
+    const liabilityDisplayElement = document.getElementById('liability-display');
     const discountDisplayElement = document.getElementById('discount-display');
     const premiumDisplayElement = document.getElementById('premium-display');
     const feeDisplayElement = document.getElementById('fee-display');
@@ -79,7 +80,8 @@ const displayPremium = () => {
 
     rateClassDisplayElement.innerHTML = rateClass;
     territoryDisplayElement.innerHTML = territory;
-    discountDisplayElement.innerHTML = Math.round((discount - 1) * 100);
+    liabilityDisplayElement.innerHTML = '$200k';
+    discountDisplayElement.innerHTML = `${Math.round((discount - 1) * 100)}%`;
     premiumDisplayElement.innerHTML = `$${roundedPremium}`;
     feeDisplayElement.innerHTML = '$33'
     totalDisplayElement.innerHTML = `$${roundedPremium + 33}`
