@@ -1,14 +1,12 @@
 body {
   --color-primary: #444;
   --color-bg: #fff;
-  --color-neutral: #dbd7cb;
-  --color-accent: #1daeec;
+  --color-accent: #1daeec; /* 29, 174, 236 */
 
   background-color: var(--color-bg);
   color: var(--color-primary);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  margin: 1rem;
 }
 
 .logo {
@@ -17,6 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .logo .text {
   font-size: 3rem;
   font-weight: 800;
@@ -30,20 +29,29 @@ body {
 
 h1, h2 {
   font-weight: 600;
+  padding-left: 1rem;
 }
-
-
 
 .form-row {
-  height: 1.5rem;
+  padding: 1rem;
 }
-.form-row label,
-.label {
+
+li {
+  padding: 3px 0 3px 1rem;
+}
+
+.form-row label {
   padding-right: .5rem;
+  display: block;
 }
+
+.display {
+  padding-left: .5rem;
+}
+
 .form-row select,
 .form-row input {
-  width: 10rem;
+  width: 100%;
   font-weight: 400;
   color: var(--color-primary);
 }
@@ -65,9 +73,17 @@ a {
   font-size: .75rem;
   max-width: 30rem;
   text-align: center;
+  padding: 0 1rem 0 1rem;
 }
 
-@media screen and (min-width: 411px) {
+@media screen and (max-width: 411px) { /* <-- MOBILE ONLY */
+  li:nth-child(odd),
+  .form-row:nth-child(odd) {
+    background-color: rgba(29, 174, 236, 0.1);
+  }
+}
+
+@media screen and (min-width: 411px) { /* <-- DESKTOP ONLY */
   body {
     display: flex;
     flex-direction: column;
@@ -83,20 +99,30 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 1.5rem;
+    padding: .3px 0 .3px 0;
   }
+
   .form-row label,
   .label {
+    display: inline-block;
     text-align: right;
   }
+
   .form-row select,
   .form-row input {
     width: 15rem;
     height: 1.25rem;
     font-size: 1rem;
   }
+
   .display {
     width: 4rem;
     height: 1.25rem;
     font-size: 1rem;
+  }
+
+  li {
+    padding: 0;
   }
 }
