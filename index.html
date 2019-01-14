@@ -18,7 +18,7 @@
 
   <h1>ICBC Motorcycle Insurance Estimator</h1>
 
-  <div>
+  <section>
     <div class="form-row">
       <label for="rate-class-select">Displacement</label>
       <select id="displacement-select">
@@ -89,8 +89,10 @@
         <option value=".57">43% discount</option>
       </select>
     </div>
+  </section>
 
-    <h2>Summary</h2>
+  <h2>Summary</h2>
+  <section>
     <ul>
       <li class="form-row"><span class="label">Rate Class:</span><span class="display" id="rate-class-display">--</span></li>
       <li class="form-row"><span class="label">Territory:</span><span class="display" id="territory-display">--</span></li>
@@ -100,12 +102,12 @@
       <li class="form-row"><span class="label">Annual Licence Fee:</span><span class="display" id="fee-display">--</span></li>
       <li class="form-row"><span class="label">Total Payable:</span><span class="display" id="total-display">--</span></li>
     </ul>
+  </section>
 
-    <p class="disclaimer">
-      This site is not associated with ICBC. It is an open-source community project.
-      You may report inaccuracies vie <a href="https://github.com/Lateworm/icbcmc/issues">GitHub</a> or <a href="https://www.reddit.com/r/motorcycles/comments/a7vho6/get_icbc_motorcycle_insurance_estimates_online/">Reddit</a>.
-    </p>
-  </div>
+  <p class="disclaimer">
+    This site is not associated with ICBC. It is an open-source community project.
+    You may report inaccuracies vie <a href="https://github.com/Lateworm/icbcmc/issues">GitHub</a> or <a href="https://www.reddit.com/r/motorcycles/comments/a7vho6/get_icbc_motorcycle_insurance_estimates_online/">Reddit</a>.
+  </p>
 </body>
 
 <script src="estimate.js"></script>

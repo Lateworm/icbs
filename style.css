@@ -32,9 +32,7 @@ h1, h2 {
   font-weight: 600;
 }
 
-.disclaimer {
-  font-size: .75rem;
-}
+
 
 .form-row {
   height: 1.5rem;
@@ -63,6 +61,11 @@ a {
   color: var(--color-accent);
 }
 
+.disclaimer {
+  font-size: .75rem;
+  max-width: 30rem;
+  text-align: center;
+}
 
 @media screen and (min-width: 411px) {
   body {
@@ -86,9 +89,13 @@ a {
     text-align: right;
   }
   .form-row select,
-  .form-row input,
-  .display {
+  .form-row input {
     width: 15rem;
+    height: 1.25rem;
+    font-size: 1rem;
+  }
+  .display {
+    width: 4rem;
     height: 1.25rem;
     font-size: 1rem;
   }
