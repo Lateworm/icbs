@@ -2,70 +2,60 @@
 <html lang="en">
 
 <head>
-  <title>ICBC MC Insurance Estimater</title>
+  <title>ICBC MC Insurance Calculator</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="normy.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+    integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <div class="logo">
-    <span class="text">ICB$</span>
-  </div>
+  <div class="logo"><span class="text">ICB$</span></div>
 
-  <h1>ICBC Motorcycle Insurance Estimator</h1>
+  <h1>ICBC Basic Motorcycle Insurance Calculator</h1>
 
-  <section>
-    <div class="form-row">
-      <label for="rate-class-select">Displacement</label>
-      <select id="displacement-select">
-        <option value="displacement"></option>
-        <option value="310">Up to 100 cc</option>
-        <option value="311">111 - 400 cc</option>
-        <option value="312">401 - 750 cc</option>
-        <option value="313">751 - 1150 cc</option>
-        <option value="314">Over 1150 cc</option>
-      </select>
-    </div>
+  <form class="pure-form pure-form-stacked">
+    <fieldset>
+      <div class="select-row">
+        <label for="rate-class-select"><b>Displacement</b></label>
+        <select id="displacement-select">
+          <option value="displacement"></option>
+          <option value="310">Up to 100 cc</option>
+          <option value="311">111 - 400 cc</option>
+          <option value="312">401 - 750 cc</option>
+          <option value="313">751 - 1150 cc</option>
+          <option value="314">Over 1150 cc</option>
+        </select>
+      </div>
 
-    <div class="form-row">
-      <label for="sixty-five">65 years or older</label>
-      <input type="checkbox" id="sixty-five" name="sixty-five">
-    </div>
+      <div class="select-row">
+        <label for="territory-select"><b>Territory</b></label>
+        <select id="territory-select">
+          <option value="territory"></option>
+          <option value="D">Lower Mainland</option>
+          <option value="E">Maple Ridge / Pitt Meadows</option>
+          <option value="F">Squamish / Whistler area</option>
+          <option value="G">Pemberton area / Hope area</option>
+          <option value="H">Fraser Valley</option>
+          <option value="L">Thompson / Okanagan area</option>
+          <option value="N">Kootenays</option>
+          <option value="P">Cariboo area</option>
+          <option value="R">Prince George area</option>
+          <option value="S">Northern coast</option>
+          <option value="V">Peace River area</option>
+          <option value="W">South Vancouver Island / other islands</option>
+          <option value="X">Mid Vancouver Island / Sunshine Coast</option>
+          <option value="Y">Northern Vancouver Island</option>
+          <option value="Z">Other provinces / 'Murrica</option>
+        </select>
+      </div>
 
-    <div class="form-row">
-      <label for="collector">Collector Plate</label>
-      <input type="checkbox" id="collector" name="collector">
-    </div>
-
-    <div class="form-row">
-      <label for="territory-select">Territory</label>
-      <select id="territory-select">
-        <option value="territory"></option>
-        <option value="D">D: Lower Mainland</option>
-        <option value="E">E: Maple Ridge / Pitt Meadows</option>
-        <option value="F">F: Squamish / Whistler area</option>
-        <option value="G">G: Pemberton area / Hope area</option>
-        <option value="H">H: Fraser Valley</option>
-        <option value="L">L: Thompson / Okanagan area</option>
-        <option value="N">N: Kootenays</option>
-        <option value="P">P: Cariboo area</option>
-        <option value="R">R: Prince George area</option>
-        <option value="S">S: Northern coast</option>
-        <option value="V">V: Peace River area</option>
-        <option value="W">W: Southern Vancouver Island / other islands</option>
-        <option value="X">X: Middle Vancouver Island / Sunshine Coast areas</option>
-        <option value="Y">Y: Northern Vancouver Island</option>
-        <option value="Z">Z: Other provinces / 'Murrica</option>
-      </select>
-    </div>
-
-    <div class="form-row">
-      <label for="discount-select">Discount</label>
-      <select id="discount-select">
+      <div class="select-row">
+        <label for="discount-select"><b>Claim-Rated Scale Discount</b></label>
+        <select id="discount-select">
         <option value="discount"></option>
         <option value="3.05">205% surcharge</option>
         <option value="2.65">165% surcharge</option>
@@ -87,22 +77,31 @@
         <option value=".65">35% discount</option>
         <option value=".6">40% discount</option>
         <option value=".57">43% discount</option>
-      </select>
-    </div>
-  </section>
+        </select>
+      </div>
+
+      <b>Other Discounts</b>
+
+      <label for="sixty-five">
+        <input type="checkbox" id="sixty-five" name="sixty-five"> 65 years or older
+      </label>
+
+      <label for="collector">
+        <input type="checkbox" id="collector" name="collector"> Collector Plate
+      </label>
+    </fieldset>
+  </form>
 
   <h2>Summary</h2>
-  <section>
-    <ul>
-      <li><span class="label">Rate Class:</span><span class="display" id="rate-class-display">--</span></li>
-      <li><span class="label">Territory:</span><span class="display" id="territory-display">--</span></li>
-      <li><span class="label">Third Party Liability Coverage:</span><span class="display" id="liability-display">--</span></li>
-      <li><span class="label">Claim Rate:</span><span class="display" id="discount-display">--</span></li>
-      <li><span class="label">Your Cost:</span><span class="display" id="premium-display">--</span></li>
-      <li><span class="label">Annual Licence Fee:</span><span class="display" id="fee-display">--</span></li>
-      <li><span class="label">Total Payable:</span><span class="display" id="total-display">--</span></li>
-    </ul>
-  </section>
+
+  <div class="table-row"><span>Rate Class:</span><span class="display" id="rate-class-display">--</span></div>
+  <div class="table-row"><span>Territory:</span><span class="display" id="territory-display">--</span></div>
+  <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display" id="liability-display">--</span></div>
+  <div class="table-row"><span>Claim Rate:</span><span class="display" id="discount-display">--</span></div>
+  <div class="table-row"><span>Your Cost:</span><span class="display" id="premium-display">--</span></div>
+  <div class="table-row"><span>Annual Licence Fee:</span><span class="display" id="fee-display">--</span></div>
+  <div class="table-row"><span>Total Payable:</span><span class="display" id="total-display">--</span></div>
+
 
   <!-- <section>
     <h2>Notes on ICBC Rate Classes</h2>
