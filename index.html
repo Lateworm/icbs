@@ -81,15 +81,20 @@
           </select>
         </div>
 
+        </br>
         <b>Other Discounts</b>
 
-        <label for="sixty-five">
-          <input type="checkbox" id="sixty-five" name="sixty-five"> 65 years or older
-        </label>
+        <div class="checkbox-row">
+          <label for="sixty-five">
+            <input type="checkbox" id="sixty-five" name="sixty-five"> 65 years or older
+          </label>
+        </div>
 
-        <label for="collector">
-          <input type="checkbox" id="collector" name="collector"> Collector Plate
-        </label>
+        <div class="checkbox-row">
+          <label for="collector">
+            <input type="checkbox" id="collector" name="collector"> Collector Plate
+          </label>
+        </div>
       </fieldset>
     </form>
 
@@ -101,7 +106,7 @@
     <div class="table-row"><span>Claim Rate:</span><span class="display" id="discount-display">--</span></div>
     <div class="table-row"><span>Your Cost:</span><span class="display" id="premium-display">--</span></div>
     <div class="table-row"><span>Annual Licence Fee:</span><span class="display" id="fee-display">--</span></div>
-    <div class="table-row"><span>Total Payable:</span><span class="display" id="total-display">--</span></div>
+    <div class="table-row"><b>Total Payable:</b><b class="display" id="total-display">--</b></div>
 
 
     <!-- <section>
@@ -133,8 +138,9 @@
         fits entirely within the bounds of class 313, making this class obviously obsolete.</p>
     </section> -->
 
+    </br>
 
-    <p>
+    <p class="disclaimer">
       This site is not associated with ICBC. It is an open-source community project.
       You may report inaccuracies vie <a href="https://github.com/Lateworm/icbcmc/issues">GitHub</a> or <a href="https://www.reddit.com/r/motorcycles/comments/a7vho6/get_icbc_motorcycle_insurance_estimates_online/">Reddit</a>.
     </p>

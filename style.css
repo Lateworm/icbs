@@ -20,6 +20,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1rem 0 2rem 0;
 }
 
 .logo .text {
@@ -37,8 +38,9 @@ h1, h2, h3, b {
   font-weight: 600;
 }
 
-.select-row {
-  margin-bottom: .5rem;
+.select-row,
+.checkbox-row {
+  margin-top: .5rem;
 }
 
 select {
@@ -46,17 +48,23 @@ select {
   border-radius: 1rem;
 }
 
+input[type='checkbox'] {
+  margin-right: 4px;
+}
+
 .table-row {
   display: flex;
   justify-content: space-between;
 }
 
-.table-row {
+.table-row,
+.checkbox-row {
   padding: 2px 6px;
   border-radius: 4px;
 }
 
-.table-row:nth-child(odd) {
+.table-row:nth-child(odd),
+.checkbox-row {
   background-color: rgba(29, 174, 236, 0.1);
 }
 
