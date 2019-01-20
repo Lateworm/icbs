@@ -10,6 +10,12 @@ body {
   padding: 1rem;
 }
 
+section {
+  max-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .logo {
   display: flex;
   flex-direction: column;

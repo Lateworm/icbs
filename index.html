@@ -13,126 +13,127 @@
 </head>
 
 <body>
-  <div class="logo"><span class="text">ICB$</span></div>
+  <section>
+    <div class="logo"><span class="text">ICB$</span></div>
 
-  <h1>ICBC Basic Motorcycle Insurance Calculator</h1>
+    <h1>ICBC Basic Motorcycle Insurance Calculator</h1>
 
-  <form class="pure-form pure-form-stacked">
-    <fieldset>
-      <div class="select-row">
-        <label for="rate-class-select"><b>Displacement</b></label>
-        <select id="displacement-select">
-          <option value="displacement"></option>
-          <option value="310">Up to 100 cc</option>
-          <option value="311">111 - 400 cc</option>
-          <option value="312">401 - 750 cc</option>
-          <option value="313">751 - 1150 cc</option>
-          <option value="314">Over 1150 cc</option>
-        </select>
-      </div>
+    <form class="pure-form pure-form-stacked">
+      <fieldset>
+        <div class="select-row">
+          <label for="rate-class-select"><b>Displacement</b></label>
+          <select id="displacement-select">
+            <option value="displacement"></option>
+            <option value="310">Up to 100 cc</option>
+            <option value="311">111 - 400 cc</option>
+            <option value="312">401 - 750 cc</option>
+            <option value="313">751 - 1150 cc</option>
+            <option value="314">Over 1150 cc</option>
+          </select>
+        </div>
 
-      <div class="select-row">
-        <label for="territory-select"><b>Territory</b></label>
-        <select id="territory-select">
-          <option value="territory"></option>
-          <option value="D">Lower Mainland</option>
-          <option value="E">Maple Ridge / Pitt Meadows</option>
-          <option value="F">Squamish / Whistler area</option>
-          <option value="G">Pemberton area / Hope area</option>
-          <option value="H">Fraser Valley</option>
-          <option value="L">Thompson / Okanagan area</option>
-          <option value="N">Kootenays</option>
-          <option value="P">Cariboo area</option>
-          <option value="R">Prince George area</option>
-          <option value="S">Northern coast</option>
-          <option value="V">Peace River area</option>
-          <option value="W">South Vancouver Island / other islands</option>
-          <option value="X">Mid Vancouver Island / Sunshine Coast</option>
-          <option value="Y">Northern Vancouver Island</option>
-          <option value="Z">Other provinces / 'Murrica</option>
-        </select>
-      </div>
+        <div class="select-row">
+          <label for="territory-select"><b>Territory</b></label>
+          <select id="territory-select">
+            <option value="territory"></option>
+            <option value="D">Lower Mainland</option>
+            <option value="E">Maple Ridge / Pitt Meadows</option>
+            <option value="F">Squamish / Whistler area</option>
+            <option value="G">Pemberton area / Hope area</option>
+            <option value="H">Fraser Valley</option>
+            <option value="L">Thompson / Okanagan area</option>
+            <option value="N">Kootenays</option>
+            <option value="P">Cariboo area</option>
+            <option value="R">Prince George area</option>
+            <option value="S">Northern coast</option>
+            <option value="V">Peace River area</option>
+            <option value="W">South Vancouver Island / other islands</option>
+            <option value="X">Mid Vancouver Island / Sunshine Coast</option>
+            <option value="Y">Northern Vancouver Island</option>
+            <option value="Z">Other provinces / 'Murrica</option>
+          </select>
+        </div>
 
-      <div class="select-row">
-        <label for="discount-select"><b>Claim-Rated Scale Discount</b></label>
-        <select id="discount-select">
-        <option value="discount"></option>
-        <option value="3.05">205% surcharge</option>
-        <option value="2.65">165% surcharge</option>
-        <option value="2.3">130% surcharge</option>
-        <option value="2">100% surcharge</option>
-        <option value="1.75">75% surcharge</option>
-        <option value="1.55">55% surcharge</option>
-        <option value="1.4">40% surcharge</option>
-        <option value="1.3">30% surcharge</option>
-        <option value="1.2">20% surcharge</option>
-        <option value="1.1">10% surcharge</option>
-        <option value="1">Base Rate</option>
-        <option value=".95">5% discount</option>
-        <option value=".9">10% discount</option>
-        <option value=".85">15% discount</option>
-        <option value=".8">20% discount</option>
-        <option value=".75">25% discount</option>
-        <option value=".7">30% discount</option>
-        <option value=".65">35% discount</option>
-        <option value=".6">40% discount</option>
-        <option value=".57">43% discount</option>
-        </select>
-      </div>
+        <div class="select-row">
+          <label for="discount-select"><b>Claim-Rated Scale Discount</b></label>
+          <select id="discount-select">
+          <option value="discount"></option>
+          <option value="3.05">205% surcharge</option>
+          <option value="2.65">165% surcharge</option>
+          <option value="2.3">130% surcharge</option>
+          <option value="2">100% surcharge</option>
+          <option value="1.75">75% surcharge</option>
+          <option value="1.55">55% surcharge</option>
+          <option value="1.4">40% surcharge</option>
+          <option value="1.3">30% surcharge</option>
+          <option value="1.2">20% surcharge</option>
+          <option value="1.1">10% surcharge</option>
+          <option value="1">Base Rate</option>
+          <option value=".95">5% discount</option>
+          <option value=".9">10% discount</option>
+          <option value=".85">15% discount</option>
+          <option value=".8">20% discount</option>
+          <option value=".75">25% discount</option>
+          <option value=".7">30% discount</option>
+          <option value=".65">35% discount</option>
+          <option value=".6">40% discount</option>
+          <option value=".57">43% discount</option>
+          </select>
+        </div>
 
-      <b>Other Discounts</b>
+        <b>Other Discounts</b>
 
-      <label for="sixty-five">
-        <input type="checkbox" id="sixty-five" name="sixty-five"> 65 years or older
-      </label>
+        <label for="sixty-five">
+          <input type="checkbox" id="sixty-five" name="sixty-five"> 65 years or older
+        </label>
 
-      <label for="collector">
-        <input type="checkbox" id="collector" name="collector"> Collector Plate
-      </label>
-    </fieldset>
-  </form>
+        <label for="collector">
+          <input type="checkbox" id="collector" name="collector"> Collector Plate
+        </label>
+      </fieldset>
+    </form>
 
-  <h2>Summary</h2>
+    <h2>Summary</h2>
 
-  <div class="table-row"><span>Rate Class:</span><span class="display" id="rate-class-display">--</span></div>
-  <div class="table-row"><span>Territory:</span><span class="display" id="territory-display">--</span></div>
-  <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display" id="liability-display">--</span></div>
-  <div class="table-row"><span>Claim Rate:</span><span class="display" id="discount-display">--</span></div>
-  <div class="table-row"><span>Your Cost:</span><span class="display" id="premium-display">--</span></div>
-  <div class="table-row"><span>Annual Licence Fee:</span><span class="display" id="fee-display">--</span></div>
-  <div class="table-row"><span>Total Payable:</span><span class="display" id="total-display">--</span></div>
+    <div class="table-row"><span>Rate Class:</span><span class="display" id="rate-class-display">--</span></div>
+    <div class="table-row"><span>Territory:</span><span class="display" id="territory-display">--</span></div>
+    <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display" id="liability-display">--</span></div>
+    <div class="table-row"><span>Claim Rate:</span><span class="display" id="discount-display">--</span></div>
+    <div class="table-row"><span>Your Cost:</span><span class="display" id="premium-display">--</span></div>
+    <div class="table-row"><span>Annual Licence Fee:</span><span class="display" id="fee-display">--</span></div>
+    <div class="table-row"><span>Total Payable:</span><span class="display" id="total-display">--</span></div>
 
 
-  <!-- <section>
-    <h2>Notes on ICBC Rate Classes</h2>
-    <p>ICBC's motorcycle policies place the insured bike into one of four basic categories:</p>
+    <!-- <section>
+      <h2>Notes on ICBC Rate Classes</h2>
+      <p>ICBC's motorcycle policies place the insured bike into one of four basic categories:</p>
 
-    <h3>Class 311 (111-400 cc)</h3>
-    <p>Least powerful bike in the category: Honda Grom @ 9.6 Horsepower</p>
-    <p>Most powerful: Kawasaki Ninja 400 @ 48 Hp</p>
-    <p>Power range in this class: 38.4 Hp. The most powerful bike in this class is 5 times as powerful as the least.</p>
+      <h3>Class 311 (111-400 cc)</h3>
+      <p>Least powerful bike in the category: Honda Grom @ 9.6 Horsepower</p>
+      <p>Most powerful: Kawasaki Ninja 400 @ 48 Hp</p>
+      <p>Power range in this class: 38.4 Hp. The most powerful bike in this class is 5 times as powerful as the least.</p>
 
-    <h3>Class 312 (401-750 cc)</h3>
-    <p>Royal Enfield Himalayan: 24 Hp</p>
-    <p>Gixxer 750: 148 Hp</p>
-    <p>Range: 124 Hp, 6.16x. In BC, It is entirely possible to for the owner of a beautiful but modestly-powered
-      Enfield to pay the same insurance cost as a sportbike rider with more than 6 times the horsepower. This is the
-      broadest percentage difference of the 4 classes.</p>
+      <h3>Class 312 (401-750 cc)</h3>
+      <p>Royal Enfield Himalayan: 24 Hp</p>
+      <p>Gixxer 750: 148 Hp</p>
+      <p>Range: 124 Hp, 6.16x. In BC, It is entirely possible to for the owner of a beautiful but modestly-powered
+        Enfield to pay the same insurance cost as a sportbike rider with more than 6 times the horsepower. This is the
+        broadest percentage difference of the 4 classes.</p>
 
-    <h3>Class 313 (751-1150 cc)</h3>
-    <p>Triumph Scrambler: 55 Hp</p>
-    <p>Kawi Ninja H2 R: 200 Hp</p>
-    <p>Range: 145 Hp, 3.63x. This is the broadest class in terms horsepower range.</p>
+      <h3>Class 313 (751-1150 cc)</h3>
+      <p>Triumph Scrambler: 55 Hp</p>
+      <p>Kawi Ninja H2 R: 200 Hp</p>
+      <p>Range: 145 Hp, 3.63x. This is the broadest class in terms horsepower range.</p>
 
-    <h3>Class 314 (over 1150 cc)</h3>
-    <p>Triumph Bonneville T120: 80 Hp</p>
-    <p>Kawi Ninja ZX-14R ABS: 192 Hp (Boss Hoss: 445 Hp)</p>
-    <p>Many riders pay high rates for large displacement, but this is not necessarily reflective of power output.
-      Interestingly, the power output range of bikes in this class (excluding the Hoss because it's such a far outlier)
-      fits entirely within the bounds of class 313, making this class obviously obsolete.</p>
-  </section> -->
+      <h3>Class 314 (over 1150 cc)</h3>
+      <p>Triumph Bonneville T120: 80 Hp</p>
+      <p>Kawi Ninja ZX-14R ABS: 192 Hp (Boss Hoss: 445 Hp)</p>
+      <p>Many riders pay high rates for large displacement, but this is not necessarily reflective of power output.
+        Interestingly, the power output range of bikes in this class (excluding the Hoss because it's such a far outlier)
+        fits entirely within the bounds of class 313, making this class obviously obsolete.</p>
+    </section> -->
 
-  <section class="disclaimer">
+
     <p>
       This site is not associated with ICBC. It is an open-source community project.
       You may report inaccuracies vie <a href="https://github.com/Lateworm/icbcmc/issues">GitHub</a> or <a href="https://www.reddit.com/r/motorcycles/comments/a7vho6/get_icbc_motorcycle_insurance_estimates_online/">Reddit</a>.
