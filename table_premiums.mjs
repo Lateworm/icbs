@@ -1,4 +1,4 @@
-const premiums = {
+export const tablePremiums = {
   // All premiums for $200k 3rd-party liability
   310: { D: 238, E: 236, F: 242, G: 211, H: 240, L: 239, N: 215, P: 226, R: 217, S: 200, V: 210, W: 216, X: 235, Y: 206, Z: 271 },
   311: { D: 680, E: 719, F: 756, G: 634, H: 707, L: 662, N: 640, P: 675, R: 660, S: 602, V: 626, W: 639, X: 685, Y: 614, Z: 780 },
@@ -20,70 +20,4 @@ const premiums = {
   722: { D: 225, E: 239, F: 233, G: 221, H: 235, L: 225, N: 219, P: 221, R: 207, S: 202, V: 213, W: 205, X: 206, Y: 207, Z: 252 },
   723: { D: 290, E: 315, F: 305, G: 289, H: 307, L: 297, N: 288, P: 289, R: 280, S: 289, V: 282, W: 272, X: 269, Y: 281, Z: 334 },
   724: { D: 326, E: 335, F: 321, G: 321, H: 337, L: 327, N: 344, P: 322, R: 295, S: 321, V: 306, W: 347, X: 297, Y: 308, Z: 38 },
-}
-
-
-let displacement = null;
-let rateClass = null;
-const displacementSelect = document.getElementById('displacement-select');
-displacementSelect.addEventListener('change', e => {
-  displacement = displacementSelect.options[displacementSelect.selectedIndex].value;
-  displayPremium();
-}, false);
-
-let sixtyFive = false;
-const sixtyFiveCheckbox = document.getElementById('sixty-five');
-sixtyFiveCheckbox.addEventListener('change', e => {
-  sixtyFive = sixtyFiveCheckbox.checked;
-  displayPremium();
-}, false);
-
-let collector = false;
-const collectorCheckbox = document.getElementById('collector');
-collectorCheckbox.addEventListener('change', e => {
-  collector = collectorCheckbox.checked;
-  displayPremium();
-}, false);
-
-let territory = null;
-const territorySelect = document.getElementById('territory-select');
-territorySelect.addEventListener('change', e => {
-  territory = territorySelect.options[territorySelect.selectedIndex].value;
-  displayPremium();
-}, false);
-
-let discount = null;
-const discountSelect = document.getElementById('discount-select');
-discountSelect.addEventListener('change', e => {
-  discount = discountSelect.options[discountSelect.selectedIndex].value;
-  displayPremium();
-}, false);
-
-const displayPremium = () => {
-  if (displacement && territory && discount) {
-
-    rateClass = displacement
-    if (sixtyFive) { rateClass = parseInt(rateClass, 10) + 10; }
-    if (collector) { rateClass = parseInt(rateClass, 10) + 400; }
-
-    baseRatePremium = premiums[rateClass][territory]
-    claimRatedPremium = baseRatePremium * discount
-    roundedPremium = Math.round(claimRatedPremium)
-
-    const rateClassDisplayElement = document.getElementById('rate-class-display');
-    const territoryDisplayElement = document.getElementById('territory-display');
-    const liabilityDisplayElement = document.getElementById('liability-display');
-    const discountDisplayElement = document.getElementById('discount-display');
-    const premiumDisplayElement = document.getElementById('premium-display');
-    const feeDisplayElement = document.getElementById('fee-display');
-    const totalDisplayElement = document.getElementById('total-display');
-
-    rateClassDisplayElement.innerHTML = rateClass;
-    territoryDisplayElement.innerHTML = territory;
-    liabilityDisplayElement.innerHTML = '$200k';
-    discountDisplayElement.innerHTML = `${Math.round((discount - 1) * 100)}%`;
-    premiumDisplayElement.innerHTML = `$${roundedPremium}`;
-    feeDisplayElement.innerHTML = '$33'
-    totalDisplayElement.innerHTML = `$${roundedPremium + 33}`
-  }
 }
