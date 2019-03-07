@@ -21,28 +21,28 @@
     <form class='pure-form pure-form-stacked'>
       <fieldset>
         <div class='select-row'>
-          <label for="rate-class-select"><b>Displacement</b></label>
-          <select id="rate-class-select">
-            <option v-for="rateClass in rateClasses">
-              {{ rateClass }}
+          <label for='rate-class-select'><b>Displacement</b></label>
+          <select id='rate-class-select' v-model='model.rateClass'>
+            <option v-for="(value, key) in rateClasses" :value='key'>
+              {{ value }}
             </option>
           </select>
         </div>
 
         <div class='select-row'>
           <label for="territory-select"><b>Location</b></label>
-          <select id="territory-select">
-            <option v-for="territory in territories">
-              {{ territory }}
+          <select id="territory-select" v-model="model.territory">
+            <option v-for="(value, key) in territories" :value='key'>
+              {{ value }}
             </option>
           </select>
         </div>
 
         <div class='select-row'>
           <label for="claim-rate-select"><b>Claim-Rated Scale Discount</b></label>
-          <select id="claim-rate-select">
-            <option v-for="rate in claimRates">
-              {{ rate }}
+          <select id="claim-rate-select" v-model="model.claimRate">
+            <option v-for="(value, key) in claimRates" :value='key'>
+              {{ value }}
             </option>
           </select>
         </div>
@@ -52,27 +52,26 @@
 
         <div class="checkbox-row">
           <label for="sixty-five">
-            <input type="checkbox" id="sixty-five" name="sixty-five"> 65 years or older
+            <input type="checkbox" id="sixty-five" name="sixty-five" v-model="model.sexaquinquagenarian"> 65 years or older
           </label>
         </div>
 
         <div class="checkbox-row">
           <label for="collector">
-            <input type="checkbox" id="collector" name="collector"> Collector Plate
+            <input type="checkbox" id="collector" name="collector" v-model="model.collector"> Collector Plate
           </label>
         </div>
       </fieldset>
     </form>
 
     <h2>Summary</h2>
-
-    <div class="table-row"><span>Rate Class:</span><span class="display" id="rate-class-display">--</span></div>
-    <div class="table-row"><span>Territory:</span><span class="display" id="territory-display">--</span></div>
-    <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display" id="liability-display">--</span></div>
-    <div class="table-row"><span>Claim Rate:</span><span class="display" id="discount-display">--</span></div>
-    <div class="table-row"><span>Your Cost:</span><span class="display" id="premium-display">--</span></div>
-    <div class="table-row"><span>Annual Licence Fee:</span><span class="display" id="fee-display">--</span></div>
-    <div class="table-row"><b>Total Payable:</b><b class="display" id="total-display">--</b></div>
+    <div class="table-row"><span>Rate Class:</span><span class="display">{{ computedRateClass }}</span></div>
+    <div class="table-row"><span>Territory:</span><span class="display">{{ model.territory }}</span></div>
+    <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display">{{ model.liability }}</span></div>
+    <div class="table-row"><span>Claim Rate:</span><span class="display">{{ model.claimRate }}</span></div>
+    <div class="table-row"><span>Your Cost:</span><span class="display">${{ cost }}</span></div>
+    <div class="table-row"><span>Annual Licence Fee:</span><span class="display">${{ model.fee }}</span></div>
+    <div class="table-row"><b>Total Payable:</b><b class="display">${{ payable }}</b></div>
 
     </br>
 
@@ -84,6 +83,7 @@
 </body>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="js/table_premiums.js"></script>
 <script type="text/javascript" src="js/estimate_vue.js"></script>
 
 </html>
