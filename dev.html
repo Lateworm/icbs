@@ -68,10 +68,10 @@
     <div class="table-row"><span>Rate Class:</span><span class="display">{{ computedRateClass }}</span></div>
     <div class="table-row"><span>Territory:</span><span class="display">{{ model.territory }}</span></div>
     <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display">{{ model.liability }}</span></div>
-    <div class="table-row"><span>Claim Rate:</span><span class="display">{{ model.claimRate }}</span></div>
-    <div class="table-row"><span>Your Cost:</span><span class="display">${{ cost }}</span></div>
+    <div class="table-row"><span>Claim Rate:</span><span class="display">{{ computedClaimRate }}</span></div>
+    <div class="table-row"><span>Your Cost:</span><span class="display">${{ computedCost }}</span></div>
     <div class="table-row"><span>Annual Licence Fee:</span><span class="display">${{ model.fee }}</span></div>
-    <div class="table-row"><b>Total Payable:</b><b class="display">${{ payable }}</b></div>
+    <div class="table-row"><b>Total Payable:</b><b class="display">${{ computedPayable }}</b></div>
 
     </br>
 

@@ -65,11 +65,18 @@ new Vue({
       if (this.model.collector) {rateClass += 400}
       return `${rateClass}`
     },
-    cost: function () {
-      return this.premiums[this.computedRateClass][this.model.territory]
+    computedClaimRate: function() {
+      claimRate = parseFloat(this.model.claimRate, 10)
+      claimRatedPercentage = Math.round((claimRate - 1) * 100)
+      return `${claimRatedPercentage}%`
     },
-    payable: function () {
-      return this.cost + this.model.fee
-    }
+    computedCost: function () {
+      baseCost = this.premiums[this.computedRateClass][this.model.territory]
+      claimRate = parseFloat(this.model.claimRate, 10)
+      return Math.round(baseCost * claimRate)
+    },
+    computedPayable: function () {
+      return Math.round(this.computedCost + this.model.fee)
+    },
   },
 })
