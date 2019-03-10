@@ -3,11 +3,12 @@
 
 <head>
   <title>ICBC Basic M/C Insurance Calculator</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-    integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="css/pure-min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800">
   <link rel="stylesheet" href="css/icbs.css">
 </head>
@@ -65,7 +66,9 @@
     </form>
 
     <h2>Summary</h2>
-    <div class="table-row"><span>Rate Class:</span><span class="display">{{ computedRateClass }}</span></div>
+    <div class="table-row">
+      <a href="rate_classes.html">Rate Class:</a><span class="display">{{ computedRateClass }}</span>
+    </div>
     <div class="table-row"><span>Territory:</span><span class="display">{{ model.territory }}</span></div>
     <div class="table-row"><span>Third Party Liability Coverage:</span><span class="display">{{ model.liability }}</span></div>
     <div class="table-row"><span>Claim Rate:</span><span class="display">{{ computedClaimRate }}</span></div>
@@ -74,7 +77,6 @@
     <div class="table-row"><b>Total Payable:</b><b class="display">${{ computedPayable }}</b></div>
 
     </br>
-
     <p class="disclaimer">
       This site is not associated with ICBC. It is an open-source community project.
       You may report inaccuracies vie <a href="https://github.com/Lateworm/icbcmc/issues">GitHub</a> or <a href="https://www.reddit.com/r/motorcycles/comments/a7vho6/get_icbc_motorcycle_insurance_estimates_online/">Reddit</a>.
@@ -84,6 +86,6 @@
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script type="text/javascript" src="js/table_premiums.js"></script>
-<script type="text/javascript" src="js/estimate.js"></script>
+<script type="text/javascript" src="js/estimate.vue.js"></script>
 
 </html>

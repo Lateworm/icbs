@@ -75,3 +75,18 @@ input[type='checkbox'] {
 a {
   color: var(--color-accent);
 }
+
+.table-row a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Chartist */
+
+.ct-series.ct-series-a line {
+  opacity: 0;
+}
+
+.ct-series.ct-series-b line {
+  stroke: var(--color-accent);
+}
