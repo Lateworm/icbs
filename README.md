@@ -1,10 +1,10 @@
 # ICBC Insurance Estimator
 
-Provides an estimate of the base price of ICBC motorcycle insurance
+This estimator was written to provides an estimate of the base price of ICBC motorcycle insurance. However, ICBC's system has since changed. You can still use this to figure out what your basic premium would have been prior to ICBC's September 2019 changes.
 
 ## Running locally
 
-Simply loading `index.html` in a browser
+Simply load `index.html` in a browser
 
 ## Sources
 
